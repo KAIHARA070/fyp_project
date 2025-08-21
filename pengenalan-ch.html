@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Server Business Plan - Complete Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#0f172a',
+                        accent: '#06b6d4'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            height: 12px;
+            width: 12px;
+            background: #1e40af;
+            border-radius: 50%;
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #06b6d4, #1e40af);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <img src="logo.png" alt="Professional cloud server infrastructure logo with modern geometric design in blue and white colors" class="mx-auto mb-4 rounded-full">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Cloud Hosting Business Plan</h1>
+                <p class="text-xl md:text-2xl opacity-90">Panduan Lengkap: Proxmox + Next cloud +ERP</p>
+                <div class="mt-8 inline-flex items-center bg-white bg-opacity-20 rounded-full px-6 py-3">
+                    <span class="text-green-250 font-semibold">Ready to Launch</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <!-- Navigation -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6">
+        <ul class="flex flex-wrap justify-center py-4 space-x-2 md:space-x-8 text-sm md:text-base">
+            <li><a href="#overview" class="text-primary hover:text-accent transition-colors px-3 py-2 rounded">Overview</a></li>
+            <li><a href="#technical" class="text-primary hover:text-accent transition-colors px-3 py-2 rounded">Technical Plan</a></li>
+            <li><a href="#implementation" class="text-primary hover:text-accent transition-colors px-3 py-2 rounded">Implementation</a></li>
+            <li><a href="#sales" class="text-primary hover:text-accent transition-colors px-3 py-2 rounded">Sales Strategy</a></li>
+            <li><a href="#pricing" class="text-primary hover:text-accent transition-colors px-3 py-2 rounded">Pricing</a></li>
+            <li><a href="#timeline" class="text-primary hover:text-accent transition-colors px-3 py-2 rounded">Timeline</a></li>
+            <li><a href="ch.html" class="bg-accent text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">Sign Up</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <main class="container mx-auto px-6 py-12">
+        <!-- Business Overview -->
+        <section id="overview" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Business Overview</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Analisis lengkap untuk membangun bisnis cloud server yang profitable dengan teknologi terdepan</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/598d5043-ffdb-499d-8534-26b9707bf4cb.png" alt="Modern data center with servers and networking equipment in a clean professional environment" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-secondary mb-3">Target Market</h3>
+                  <ul class="text-gray-600 space-y-2">
+                      <li class="flex items-center">
+                          <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                        IKM yang perlu hosting reliabel
+                    </li>
+                      <li class="flex items-center">
+                          <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                          Startup teknologi
+                      </li>
+                      <li class="flex items-center">
+                          <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                          Agensi web development
+                      </li>
+                      <li class="flex items-center">
+                          <span class="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                          E-commerce businesses
+                      </li>
+                  </ul>
+                </div>
+
+              <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/95b19f05-25ad-49a4-8687-e8f2ceb2f092.png" alt="Business growth chart with upward trending arrows and financial success indicators" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-semibold text-secondary mb-3">Value Proposition</h3>
+                  <ul class="text-gray-600 space-y-2">
+                      <li class="flex items-center">
+                          <span class="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                          99.9% uptime guarantee
+                      </li>
+                      <li class="flex items-center">
+                          <span class="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                          Support 24/7 berbahasa lokal
+                      </li>
+                      <li class="flex items-center">
+                          <span class="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                      Harga berpatutan </li>
+                      <li class="flex items-center">
+                          <span class="w-2 h-2 bg-accent rounded-full mr-3"></span>
+                          Backup otomatis
+                      </li>
+                  </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover md:col-span-2 lg:col-span-1">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4abc0d14-90ed-487b-a620-a9543f59b383.png" alt="Money and profit analysis dashboard showing revenue streams and business growth metrics" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Revenue Streams</h3>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            VPS Hosting Plans
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Managed Services
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Custom Solutions
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                            Migration Services
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section id="technical" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Technical Architecture</h2>
+                <p class="text-lg text-gray-600">Infrastruktur robust dengan Proxmox, Ubuntu, dan Laravel</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/39bbc2eb-7871-41ce-8ff2-77c8e98e0206.png" alt="Technical architecture diagram showing Proxmox virtualization layer with Ubuntu VMs and Laravel backend integration" class="w-full rounded-lg mb-6">
+                        
+                        <h3 class="text-2xl font-semibold text-secondary mb-4">Infrastructure Stack</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center p-4 bg-blue-50 rounded-lg">
+                                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white font-bold mr-4">P</div>
+                                <div>
+                                    <h4 class="font-semibold">Proxmox VE</h4>
+                                    <p class="text-gray-600 text-sm">Virtualization platform untuk manage multiple VMs</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-orange-50 rounded-lg">
+                                <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold mr-4">U</div>
+                                <div>
+                                    <h4 class="font-semibold">Ubuntu Server 22.04</h4>
+                                    <p class="text-gray-600 text-sm">Operating system untuk setiap VM instance</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center p-4 bg-red-50 rounded-lg">
+                                <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold mr-4">L</div>
+                                <div>
+                                    <h4 class="font-semibold">Laravel Backend</h4>
+                                    <p class="text-gray-600 text-sm">Management system dan customer portal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold text-secondary mb-6">Hardware Requirements</h3>
+                        
+                        <div class="space-y-6">
+                          <div class="border-l-4 border-primary pl-4">
+                            <h4 class="font-semibold text-lg">Main Server</h4>
+                              <ul class="text-gray-600 mt-2 space-y-1">
+                                  <li>• CPU: Intel Xeon    (minimum 56 cores)</li>
+                                  <li>• RAM: 128GB DDR4 ECC</li>
+                                  <li>• Storage: 3x 1TB NVMe SSD (RAID 1)</li>
+                                  <li>• Network: Dual 10Gbps</li>
+                              </ul>
+                            </div>
+
+                          <div class="border-l-4 border-accent pl-4">
+                            <h4 class="font-semibold text-lg">Backup Server</h4>
+                              <ul class="text-gray-600 mt-2 space-y-1">
+                                  <li>• CPU: Intel Xeon (minimum 56 cores)</li>
+                                  <li>• RAM: 128GB DDR4 ECC</li>
+                                  <li>• Storage:  3x 1TB NVMe SSD (RAID 1)</li>
+                                  <li>• Network: 1Gbps connection</li>
+                              </ul>
+                            </div>
+
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-lg text-yellow-800">Estimated Cost</h4>
+                                <p class="text-yellow-700 mt-1">Main Server: RM 15,000 - RM 25,000</p>
+                                <p class="text-yellow-700">Backup Server: RM 8,000 - RM 12,000</p>
+                                <p class="text-yellow-700 font-semibold">Total: <span class="text-xl">RM 23,000 - RM 37,000</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementation Steps -->
+        <section id="implementation" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Step-by-Step Implementation</h2>
+                <p class="text-lg text-gray-600">Panduan lengkap dari setup hingga deployment</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-xl p-8">
+                <div class="space-y-8">
+                    <!-- Phase 1 -->
+                    <div class="relative">
+                        <h3 class="text-2xl font-semibold text-primary mb-4">Phase 1: Infrastructure Setup</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a3077c77-948c-4602-9424-a5ca451a8fce.png" alt="Server hardware installation showing rack mounted servers in a professional data center environment" class="w-full rounded-lg mb-4">
+                                <h4 class="font-semibold mb-2">Hardware Installation</h4>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>1. Procure dan setup hardware server</li>
+                                    <li>2. Install Proxmox VE pada main server</li>
+                                    <li>3. Setup backup server dengan Proxmox</li>
+                                    <li>4. Configure network dan firewall</li>
+                                    <li>5. Setup monitoring tools</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold mb-2">Proxmox Installation Commands</h4>
+                                    <pre class="text-xs bg-black text-green-400 p-3 rounded overflow-x-auto">
+# Download Proxmox ISO
+wget https://www.proxmox.com/downloads
+
+# Create bootable USB
+dd if=proxmox-ve.iso of=/dev/sdX bs=1M
+
+# Post-installation config
+pvecm create cluster-name
+pvecm add backup-server-ip</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="relative border-t pt-8">
+                        <h3 class="text-2xl font-semibold text-primary mb-4">Phase 2: VM Templates & Ubuntu Setup</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9f4d1f8b-66f5-427c-9d80-c67ab7e08ae8.png" alt="Ubuntu server terminal interface showing configuration scripts and system setup commands" class="w-full rounded-lg mb-4">
+                                <h4 class="font-semibold mb-2">Ubuntu VM Template Creation</h4>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>1. Download Ubuntu Server 22.04 LTS</li>
+                                    <li>2. Create VM template dengan optimal settings</li>
+                                    <li>3. Install essential packages</li>
+                                    <li>4. Configure security dan firewall</li>
+                                    <li>5. Setup automated backup scripts</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold mb-2">Ubuntu Setup Script</h4>
+                                    <pre class="text-xs bg-black text-green-400 p-3 rounded overflow-x-auto">
+#!/bin/bash
+# Update system
+apt update && apt upgrade -y
+
+# Install essentials
+apt install -y nginx mysql-server php8.1-fpm
+apt install -y fail2ban ufw htop
+
+# Configure firewall
+ufw allow 22,80,443/tcp
+ufw enable
+
+# Setup automatic updates
+echo 'APT::Periodic::Update-Package-Lists "1";' > /etc/apt/apt.conf.d/20auto-upgrades</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="relative border-t pt-8">
+                        <h3 class="text-2xl font-semibold text-primary mb-4">Phase 3: Laravel Control Panel Development</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/657391d6-b7b0-48e8-943f-1c8a1a5d4462.png" alt="Laravel application dashboard interface showing server management controls and customer portal features" class="w-full rounded-lg mb-4">
+                                <h4 class="font-semibold mb-2">Control Panel Features</h4>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>• Customer dashboard untuk manage VPS</li>
+                                    <li>• Billing dan payment integration</li>
+                                    <li>• VM provisioning automation</li>
+                                    <li>• Monitoring dan analytics</li>
+                                    <li>• Support ticket system</li>
+                                    <li>• API untuk third-party integration</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold mb-2">Laravel Installation</h4>
+                                    <pre class="text-xs bg-black text-green-400 p-3 rounded overflow-x-auto">
+# Install Composer
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
+# Create Laravel project
+composer create-project laravel/laravel cloud-panel
+
+# Install packages
+composer require laravel/sanctum
+composer require spatie/laravel-permission
+composer require barryvdh/laravel-dompdf
+
+# Setup database
+php artisan migrate
+php artisan db:seed</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phase 4 -->
+                    <div class="relative border-t pt-8">
+                        <h3 class="text-2xl font-semibold text-primary mb-4">Phase 4: Integration & Automation</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9389b0d5-6fd3-4375-9980-6e1178a7306d.png" alt="Automated server deployment workflow diagram showing integration between Laravel control panel and Proxmox API" class="w-full rounded-lg mb-4">
+                                <h4 class="font-semibold mb-2">Proxmox API Integration</h4>
+                                <ul class="text-gray-600 space-y-1 text-sm">
+                                    <li>1. Setup Proxmox API authentication</li>
+                                    <li>2. Create VM provisioning scripts</li>
+                                    <li>3. Implement billing automation</li>
+                                    <li>4. Setup monitoring alerts</li>
+                                    <li>5. Configure backup automation</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold mb-2">Proxmox API Example</h4>
+                                    <pre class="text-xs bg-black text-green-400 p-3 rounded overflow-x-auto">
+// Laravel Controller
+public function createVM($plan, $customer) {
+    $proxmox = new ProxmoxAPI();
+    
+    $vmConfig = [
+        'vmid' => $this->getNextVMID(),
+        'cores' => $plan->cpu_cores,
+        'memory' => $plan->ram_mb,
+        'net0' => 'virtio,bridge=vmbr0'
+    ];
+    
+    return $proxmox->create('/nodes/node1/qemu', $vmConfig);
+}</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sales Strategy -->
+        <section id="sales" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Sales & Marketing Strategy</h2>
+                <p class="text-lg text-gray-600">Strategi proven untuk mendapatkan customer dan scaling business</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9c3278d4-cabf-42e6-9b9a-a2686e0f802c.png" alt="Digital marketing campaign showing social media platforms and online advertising strategies" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Digital Marketing</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• SEO optimized website</li>
+                        <li>• Google Ads untuk hosting keywords</li>
+                        <li>• Social media marketing</li>
+                        <li>• Content marketing (blog technical)</li>
+                        <li>• Email marketing campaigns</li>
+                        <li>• Affiliate program</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6e441990-6a80-475b-9d5b-cabda1ca004e.png" alt="Business networking event with professionals discussing technology solutions and partnerships" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Partnership Strategy</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Web development agencies</li>
+                        <li>• IT consultants</li>
+                        <li>• Business chambers</li>
+                        <li>• Tech communities</li>
+                        <li>• Reseller program</li>
+                        <li>• White-label solutions</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-lg card-hover">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/55a2af01-1a3d-46ad-aa06-22415b7e80ba.png" alt="Customer service team providing technical support and consultation to business clients" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-secondary mb-3">Customer Retention</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• 24/7 technical support</li>
+                        <li>• Free migration services</li>
+                        <li>• Loyalty rewards program</li>
+                        <li>• Regular webinars/training</li>
+                        <li>• Proactive monitoring</li>
+                        <li>• Personalized consulting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gradient-to-r from-primary to-accent text-white rounded-xl p-8">
+                <h3 class="text-2xl font-semibold mb-6">Sales Funnel Strategy</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-2xl font-bold">1</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Awareness</h4>
+                        <p class="text-sm opacity-90">SEO content, ads, social media</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-2xl font-bold">2</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Interest</h4>
+                        <p class="text-sm opacity-90">Free trial, webinars, demos</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-2xl font-bold">3</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Decision</h4>
+                        <p class="text-sm opacity-90">Consultation, custom quotes</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-2xl font-bold">4</span>
+                        </div>
+                        <h4 class="font-semibold mb-2">Action</h4>
+                        <p class="text-sm opacity-90">Sign up, onboarding, support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Strategy -->
+        <section id="pricing" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Pricing Strategy</h2>
+                <p class="text-lg text-gray-600">Struktur harga yang kompetitif dan profitable</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8 relative card-hover">
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-secondary mb-2">VPS</h3>
+                        <div class="text-3xl font-bold text-primary mb-4">RM 25<span class="text-lg font-normal text-gray-600">/month</span></div>
+                      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/93eaea7e-5be0-48cc-94b2-44bc9e6397b5.png" alt="Basic server package visualization with entry-level specifications for small businesses" class="w-full rounded-lg mb-4">
+                  </div>
+                  <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                          KVM Virtualization
+                      </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                          SSD Storage
+                      </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                          99.9% Uptime
+                      </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                          Full Root Access
+                      </li>
+                        <li class="flex items-center text-gray-600">
+                           
+                            
+                        </li>
+                    </ul>
+                    <p class="text-xs text-gray-500 mb-4">Cost: RM 25 | Profit: RM 30 (67%)</p>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">Choose Plan</button>
+                </div>
+
+                <!-- Business Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8 relative card-hover border-2 border-accent">
+                    <div class="absolute -top-px left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <span class="bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">Popular</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-secondary mb-2">Nextcloud</h3>
+                        <div class="text-3xl font-bold text-accent mb-4">RM 10&nbsp;<span class="text-lg font-normal text-gray-600">/month</span></div>
+                      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/91288755-a733-4a09-af88-1d723bd5ee99.png" alt="Professional server package with enhanced performance features for growing businesses" class="w-full rounded-lg mb-4">
+                  </div>
+                  <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                          End-to-End Encryption
+                      </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                          File Sharing
+                      </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                        Calendar &amp; Contacts </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                        Collaborative Editing </li>
+                        <li class="flex items-center text-gray-600">
+                            
+                            
+                        </li>
+                    </ul>
+                    <p class="text-xs text-gray-500 mb-4">Cost: RM 10 | Profit: RM 70 (74%)</p>
+                    <button class="w-full bg-accent text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">Choose Plan</button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8 relative card-hover">
+                    <div class="text-center">
+                        <h3 class="text-xl font-semibold text-secondary mb-2">ERP&nbsp;</h3>
+                        <div class="text-3xl font-bold text-secondary mb-4">RM 15<span class="text-lg font-normal text-gray-600">/month</span></div>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ec81590c-41ef-46cd-b834-3514706aafe6.png" alt="Enterprise server solution with high-performance specs and premium features for large businesses" class="w-full rounded-lg mb-4">
+                  </div>
+                  <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                          Accounting
+                      </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                          Inventory
+                      </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                        HR &amp; CRM </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-4 h-4 bg-green-500 rounded-full mr-3 flex-shrink-0"></span>
+                          Project Management
+                      </li>
+                        <li class="flex items-center text-gray-600">
+                            
+                            
+                        </li>
+                    </ul>
+                    <p class="text-xs text-gray-500 mb-4">Cost: RM 15 | Profit: RM 150 (77%)</p>
+                    <button class="w-full bg-secondary text-white py-3 rounded-lg hover:bg-gray-800 transition-colors">Choose Plan</button>
+                </div>
+            </div>
+
+            <!-- Revenue Projection -->
+            <div class="mt-12 bg-white rounded-xl shadow-xl p-8">
+                <h3 class="text-2xl font-semibold text-secondary mb-6">Revenue Projection (Year 1)</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d485c1ec-0642-411a-a99c-80d76bc5f772.png" alt="Business revenue growth chart showing monthly progression and profit margins over first year" class="w-full rounded-lg mb-4">
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                            <span class="font-semibold">Month 3 Target:</span>
+                            <span class="text-primary font-bold">50 customers | RM 4,250/month</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                            <span class="font-semibold">Month 6 Target:</span>
+                            <span class="text-accent font-bold">120 customers | RM 10,200/month</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+                            <span class="font-semibold">Month 12 Target:</span>
+                            <span class="text-green-600 font-bold">250 customers | RM 21,250/month</span>
+                        </div>
+                        <div class="text-center p-6 bg-gradient-to-r from-green-400 to-green-600 text-white rounded-xl">
+                            <h4 class="text-xl font-bold mb-2">Year 1 Total Revenue</h4>
+                            <p class="text-3xl font-bold">RM 153,000</p>
+                            <p class="opacity-90">Net Profit: RM 112,000 (73%)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section id="timeline" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Implementation Timeline</h2>
+                <p class="text-lg text-gray-600">Roadmap 6 bulan dari setup hingga launch</p>
+            </div>
+
+            <div class="relative">
+                <div class="absolute left-8 top-0 bottom-0 w-px bg-primary"></div>
+                
+                <div class="space-y-12">
+                    <!-- Week 1-2 -->
+                    <div class="relative flex items-start">
+                        <div class="timeline-item relative z-10 left-2"></div>
+                        <div class="ml-12">
+                            <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Week 1-2</span>
+                                    <h3 class="text-xl font-semibold text-secondary">Planning & Procurement</h3>
+                                </div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/183db5f3-5a21-4858-81b0-5c8412960063.png" alt="Business planning session with hardware procurement checklist and vendor evaluation documents" class="w-full rounded-lg mb-4">
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• Finalize business plan dan budget</li>
+                                    <li>• Research dan procurement hardware</li>
+                                    <li>• Setup legal entity dan banking</li>
+                                    <li>• Register domain dan trademark</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Week 3-6 -->
+                    <div class="relative flex items-start">
+                        <div class="timeline-item relative z-10 left-2"></div>
+                        <div class="ml-12">
+                            <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Week 3-6</span>
+                                    <h3 class="text-xl font-semibold text-secondary">Infrastructure Setup</h3>
+                                </div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b0d2f361-4598-45b8-9c90-2f8f4fad79f5.png" alt="Server installation and configuration process showing rack mounted equipment and network setup" class="w-full rounded-lg mb-4">
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• Install dan configure Proxmox servers</li>
+                                    <li>• Setup network infrastructure dan security</li>
+                                    <li>• Create Ubuntu VM templates</li>
+                                    <li>• Implement backup solutions</li>
+                                </ul>
+                                <div class="mt-4 w-full bg-gray-200 rounded-full h-2">
+                                    <div class="progress-bar h-2 rounded-full w-3/4"></div>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-2">Progress: 75% Complete</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Week 7-12 -->
+                    <div class="relative flex items-start">
+                        <div class="timeline-item relative z-10 left-2"></div>
+                        <div class="ml-12">
+                            <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Week 7-12</span>
+                                    <h3 class="text-xl font-semibold text-secondary">Software Development</h3>
+                                </div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/713390c7-3477-47cf-b679-bd200258a35e.png" alt="Laravel development environment showing code editor and control panel interface design" class="w-full rounded-lg mb-4">
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• Develop Laravel control panel</li>
+                                    <li>• Implement Proxmox API integration</li>
+                                    <li>• Create customer portal</li>
+                                    <li>• Setup billing dan payment system</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Week 13-18 -->
+                    <div class="relative flex items-start">
+                        <div class="timeline-item relative z-10 left-2"></div>
+                        <div class="ml-12">
+                            <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Week 13-18</span>
+                                    <h3 class="text-xl font-semibold text-secondary">Testing & Marketing Prep</h3>
+                                </div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/df2a17a4-793f-47ed-9d90-03034d5530b1.png" alt="Quality assurance testing environment and marketing material preparation for cloud hosting launch" class="w-full rounded-lg mb-4">
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• Comprehensive system testing</li>
+                                    <li>• Create marketing materials</li>
+                                    <li>• Setup website dan landing pages</li>
+                                    <li>• Prepare documentation dan support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Week 19-24 -->
+                    <div class="relative flex items-start">
+                        <div class="timeline-item relative z-10 left-2"></div>
+                        <div class="ml-12">
+                            <div class="bg-white rounded-xl shadow-lg p-6 card-hover">
+                                <div class="flex items-center mb-3">
+                                    <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold mr-3">Week 19-24</span>
+                                    <h3 class="text-xl font-semibold text-secondary">Launch & Scale</h3>
+                                </div>
+                                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6e65581d-e01d-4629-a5d9-f1d128bb8d35.png" alt="Business launch celebration with growth charts and customer acquisition metrics dashboard" class="w-full rounded-lg mb-4">
+                                <ul class="text-gray-600 space-y-2">
+                                    <li>• Soft launch dengan beta customers</li>
+                                    <li>• Marketing campaign rollout</li>
+                                    <li>• Customer acquisition focus</li>
+                                    <li>• Monitor dan optimize performance</li>
+                                </ul>
+                                <div class="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
+                                    <p class="text-green-800 font-semibold">Target: 25 customers dalam first month</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Action Plan -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-secondary to-primary text-white rounded-xl p-12">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Cloud Empire?</h2>
+                    <p class="text-xl opacity-90">Follow this comprehensive plan and build a profitable cloud hosting business</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Next Immediate Actions:</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-3 w-4 h-4">
+                                <span>Research dan get quotes for hardware</span>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-3 w-4 h-4">
+                                <span>Register business entity dan domain</span>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-3 w-4 h-4">
+                                <span>Setup development environment</span>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" class="mr-3 w-4 h-4">
+                                <span>Create detailed technical specifications</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4">Success Factors:</h3>
+                        <div class="space-y-2 opacity-90">
+                            <p>• Focus pada quality service over price competition</p>
+                            <p>• Invest heavily dalam customer support</p>
+                            <p>• Build strong partnerships dengan developers</p>
+                            <p>• Continuous improvement based on feedback</p>
+                            <p>• Scale gradually dengan proper planning</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors mr-4">Download Business Plan PDF</button>
+                    <button class="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors">Get Technical Support</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Cloud Server Business Plan</h3>
+                    <p class="text-gray-400">Comprehensive guide untuk memulai bisnis cloud hosting yang profitable menggunakan Proxmox, Ubuntu, dan Laravel.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="text-gray-400 space-y-2">
+                        <li><a href="#overview" class="hover:text-white transition-colors">Business Overview</a></li>
+                        <li><a href="#technical" class="hover:text-white transition-colors">Technical Plan</a></li>
+                        <li><a href="#implementation" class="hover:text-white transition-colors">Implementation</a></li>
+                        <li><a href="#sales" class="hover:text-white transition-colors">Sales Strategy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Support</h3>
+                    <div class="text-gray-400 space-y-2">
+                        <p>Email: support@cloudserver.biz</p>
+                        <p>WhatsApp: +60 12-345-6789</p>
+                        <p>Consultation: Available 24/7</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 Cloud Server Business Plan. All rights reserved. Built with passion for Malaysian entrepreneurs.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactive Features -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Progress bar animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBar = entry.target.querySelector('.progress-bar');
+                    if (progressBar) {
+                        progressBar.style.width = '75%';
+                        progressBar.style.transition = 'width 2s ease-in-out';
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe timeline items
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            observer.observe(item.closest('.bg-white'));
+        });
+
+        // Interactive checklist
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const parentDiv = this.closest('div');
+                if (this.checked) {
+                    parentDiv.style.opacity = '0.7';
+                    parentDiv.style.textDecoration = 'line-through';
+                } else {
+                    parentDiv.style.opacity = '1';
+                    parentDiv.style.textDecoration = 'none';
+                }
+            });
+        });
+
+        // Revenue calculator (simple example)
+        function calculateRevenue() {
+            const customers = {
+                starter: 100,
+                business: 80,
+                enterprise: 20
+            };
+            
+            const prices = {
+                starter: 45,
+                business: 95,
+                enterprise: 195
+            };
+
+            let totalRevenue = 0;
+            Object.keys(customers).forEach(plan => {
+                totalRevenue += customers[plan] * prices[plan];
+            });
+
+            console.log(`Projected Monthly Revenue: RM ${totalRevenue.toLocaleString()}`);
+            console.log(`Projected Annual Revenue: RM ${(totalRevenue * 12).toLocaleString()}`);
+        }
+
+        // Call revenue calculator on page load
+        window.addEventListener('load', calculateRevenue);
+
+        // Add hover effects to cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Add click tracking for analytics
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                console.log('Button clicked:', this.textContent.trim());
+                // Here you would integrate with your analytics platform
+            });
+        });
+
+        // Simple form validation for contact forms
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // Add loading states to buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                const originalText = this.textContent;
+                this.textContent = 'Loading...';
+                this.disabled = true;
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.disabled = false;
+                }, 2000);
+            });
+        });
+
+        // Responsive navigation for mobile
+        function toggleMobileNav() {
+            const nav = document.querySelector('nav ul');
+            const currentDisplay = window.getComputedStyle(nav).display;
+            
+            if (window.innerWidth <= 768) {
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.background = 'white';
+                nav.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            }
+        }
+
+        window.addEventListener('resize', toggleMobileNav);
+        window.addEventListener('load', toggleMobileNav);
+    </script>
+</body>
+</html>

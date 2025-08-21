@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudHost Solutions - Proxmox VPS, Nextcloud & ERPNext</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .dashboard-card {
+            transition: all 0.3s ease;
+        }
+        .dashboard-card:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="logo.png" alt="CloudHost Solutions logo with blue cloud icon and modern typography" class="h-10">
+                    <span class="font-semibold text-xl">CloudHost</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="hover:text-blue-200">Services</a>
+                    <a href="#pricing" class="hover:text-blue-200">Pricing</a>
+                    <a href="#about" class="hover:text-blue-200">About</a>
+                    <button id="loginBtn" class="bg-white text-blue-800 px-4 py-2 rounded-lg font-medium hover:bg-blue-100 transition">Login</button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">All-in-One Cloud Solutions for Your Business</h1>
+                    <p class="text-xl mb-8">High-performance Proxmox VPS, secure Nextcloud Storage, and powerful ERPNext system - all in one platform.</p>
+                    <button class="bg-white text-blue-800 px-8 py-3 rounded-lg font-bold text-lg hover:bg-blue-100 transition">Get Started</button>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7c35f49f-f35c-4d35-9034-78c30c841cc8.png" alt="3D illustration showing integrated cloud services with server racks, storage clouds, and ERP dashboard elements" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Proxmox VPS Card -->
+                <div class="service-card bg-gray-50 rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-server text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Proxmox VPS</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">High-performance virtual private servers with full root access, powered by Proxmox virtualization.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> KVM Virtualization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> SSD Storage</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 99.9% Uptime</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Full Root Access</li>
+                    </ul>
+                    <a href="#pricing" class="text-blue-600 font-medium hover:text-blue-800 transition">View Pricing →</a>
+                </div>
+
+                <!-- Nextcloud Card -->
+                <div class="service-card bg-gray-50 rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-cloud text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Nextcloud Storage</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Secure, private cloud storage with file sharing, collaboration tools, and end-to-end encryption.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> End-to-End Encryption</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> File Sharing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Calendar & Contacts</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Collaborative Editing</li>
+                    </ul>
+                    <a href="#pricing" class="text-green-600 font-medium hover:text-green-800 transition">View Pricing →</a>
+                </div>
+
+                <!-- ERPNext Card -->
+                <div class="service-card bg-gray-50 rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-chart-line text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">ERPNext</h3>
+                    </div>
+                    <p class="text-gray-600 mb-6">Comprehensive ERP solution for accounting, inventory, HR, CRM, and project management.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Accounting</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Inventory</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> HR & CRM</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Project Management</li>
+                    </ul>
+                    <a href="#pricing" class="text-purple-600 font-medium hover:text-purple-800 transition">View Pricing →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Simple, Transparent Pricing</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">All services billed monthly. No hidden fees. Cancel anytime.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Proxmox Pricing -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="px-6 py-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-server text-blue-500 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold text-gray-800">Proxmox VPS</h3>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">RM 25</span>
+                            <span class="text-gray-600">/mo per GB RAM</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> RM25/GB RAM</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> RM0.10/GB SSD Storage</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> RM1/TB Traffic</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> RM5/IP Address</li>
+                        </ul>
+                        <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition">Calculate Your Plan</button>
+                    </div>
+                </div>
+                
+                <!-- Nextcloud Pricing -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="px-6 py-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-cloud text-green-500 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold text-gray-800">Nextcloud</h3>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">RM10</span>
+                            <span class="text-gray-600">/mo base + storage</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> RM10/month base</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> RM0.05/GB Storage</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited users</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> All apps included</li>
+                        </ul>
+                        <button class="w-full bg-green-600 text-white py-3 rounded-lg font-bold hover:bg-green-700 transition">Get Storage Now</button>
+                    </div>
+                </div>
+                
+                <!-- ERPNext Pricing -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="px-6 py-8">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-chart-line text-purple-500 text-2xl mr-3"></i>
+                            <h3 class="text-xl font-bold text-gray-800">ERPNext</h3>
+                        </div>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">RM15</span>
+                            <span class="text-gray-600">/mo per user</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> RM15/user/month</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Minimum 5 users</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> All modules included</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Daily backups</li>
+                        </ul>
+                        <button class="w-full bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition">Start ERP System</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white rounded-xl shadow-lg p-6">
+                <h3 class="text-xl font-bold text-center text-gray-800 mb-4">Bundle Discounts</h3>
+                <p class="text-center text-gray-600 mb-6">Save up to 20% when you combine services</p>
+                <div class="grid md:grid-cols-3 gap-4 text-center">
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <p class="font-semibold">VPS + Nextcloud</p>
+                        <p class="text-blue-600 font-bold">10% OFF</p>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <p class="font-semibold">VPS + ERPNext</p>
+                        <p class="text-blue-600 font-bold">15% OFF</p>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <p class="font-semibold">All Three Services</p>
+                        <p class="text-blue-600 font-bold">20% OFF</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Unified Dashboard</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Manage all your services from one centralized dashboard</p>
+            
+            <div class="bg-gray-50 rounded-xl p-6 shadow-inner">
+                <div class="flex flex-wrap mb-6">
+                    <div class="w-full md:w-1/3 p-2">
+                        <div class="dashboard-card bg-white rounded-lg shadow p-4 h-full">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-microchip text-blue-600"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-800">VPS Resources</h4>
+                            </div>
+                            <canvas id="vpsChart" height="200"></canvas>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 p-2">
+                        <div class="dashboard-card bg-white rounded-lg shadow p-4 h-full">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-database text-green-600"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-800">Storage Usage</h4>
+                            </div>
+                            <canvas id="storageChart" height="200"></canvas>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 p-2">
+                        <div class="dashboard-card bg-white rounded-lg shadow p-4 h-full">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-chart-pie text-purple-600"></i>
+                                </div>
+                                <h4 class="font-bold text-gray-800">ERP Data</h4>
+                            </div>
+                            <canvas id="erpChart" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow p-6">
+                    <div class="flex flex-wrap -mx-2">
+                        <div class="w-full md:w-1/2 p-2">
+                            <div class="bg-gray-50 rounded-lg p-4 h-full">
+                                <h4 class="font-bold text-gray-800 mb-3">Recent Activities</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-start">
+                                        <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                            <i class="fas fa-server text-blue-600 text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">VPS instance started</p>
+                                            <p class="text-sm text-gray-500">2 minutes ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                                            <i class="fas fa-cloud text-green-600 text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">File uploaded to Nextcloud</p>
+                                            <p class="text-sm text-gray-500">15 minutes ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                            <i class="fas fa-receipt text-purple-600 text-sm"></i>
+                                        </div>
+                                        <div>
+                                            <p class="font-medium">New invoice created in ERPNext</p>
+                                            <p class="text-sm text-gray-500">1 hour ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 p-2">
+                            <div class="bg-gray-50 rounded-lg p-4 h-full">
+                                <h4 class="font-bold text-gray-800 mb-3">Quick Actions</h4>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <button class="bg-blue-600 text-white py-2 px-3 rounded-lg text-sm font-medium hover:bg-blue-700 transition flex items-center justify-center">
+                                        <i class="fas fa-plus mr-2"></i> New VPS
+                                    </button>
+                                    <button class="bg-green-600 text-white py-2 px-3 rounded-lg text-sm font-medium hover:bg-green-700 transition flex items-center justify-center">
+                                        <i class="fas fa-upload mr-2"></i> Upload File
+                                    </button>
+                                    <button class="bg-purple-600 text-white py-2 px-3 rounded-lg text-sm font-medium hover:bg-purple-700 transition flex items-center justify-center">
+                                        <i class="fas fa-file-invoice mr-2"></i> Create Invoice
+                                    </button>
+                                    <button class="bg-yellow-500 text-white py-2 px-3 rounded-lg text-sm font-medium hover:bg-yellow-600 transition flex items-center justify-center">
+                                        <i class="fas fa-cog mr-2"></i> Settings
+                                    </button>
+                                </div>
+                                
+                                <hr class="my-4 border-gray-200">
+                                
+                                <div>
+                                    <h5 class="font-medium text-gray-700 mb-2">Upcoming Payment</h5>
+                                    <div class="bg-white rounded-lg p-3 shadow-sm">
+                                        <div class="flex justify-between items-center">
+                                            <div>
+                                                <p class="font-bold">RM45.00</p>
+                                                <p class="text-sm text-gray-500">Due in 3 days</p>
+                                            </div>
+                                            <button class="bg-blue-600 text-white py-1 px-3 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
+                                                Pay Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-md mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Login to CloudHost</h3>
+                    <button id="closeLoginModal" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div id="loginForm" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-1" for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-1" for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="rememberMe" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                            <label for="rememberMe" class="ml-2 block text-sm text-gray-700">Remember me</label>
+                        </div>
+                        <a href="#" class="text-sm text-blue-600 hover:text-blue-800">Forgot password?</a>
+                    </div>
+                    <button id="loginSubmit" class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">Login</button>
+                    <p class="text-center text-gray-600 text-sm">
+                        Don't have an account? <a href="#" id="showRegisterForm" class="text-blue-600 hover:text-blue-800">Register here</a>
+                    </p>
+                </div>
+                
+                <div id="registerForm" class="hidden space-y-4">
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-1" for="registerName">Full Name</label>
+                        <input type="text" id="registerName" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-1" for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-1" for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 text-sm font-medium mb-1" for="registerConfirmPassword">Confirm Password</label>
+                        <input type="password" id="registerConfirmPassword" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <button id="registerSubmit" class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition">Register</button>
+                    <p class="text-center text-gray-600 text-sm">
+                        Already have an account? <a href="#" id="showLoginForm" class="text-blue-600 hover:text-blue-800">Login here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Modal (shown after login) -->
+    <div id="dashboardModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50">
+        <div class="bg-white rounded-xl shadow-xl w-full max-w-5xl mx-4 max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">Welcome back, <span id="userName">User</span>!</h3>
+                        <p class="text-gray-600"><span id="userCompany">Company Name</span> - <span id="userPlan">Plan Name</span></p>
+                        <div class="flex space-x-4 mt-2">
+                            <div class="bg-blue-50 px-3 py-1 rounded-full">
+                                <span class="text-blue-600 text-sm">Customer since: Jan 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button id="logoutBtn" class="text-gray-500 hover:text-gray-700 flex items-center">
+                            <i class="fas fa-sign-out-alt mr-1"></i> Logout
+                        </button>
+                        <button id="closeDashboardModal" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow p-6 mb-6">
+                    <h4 class="font-bold text-gray-800 mb-4">Customer Profile</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <p class="text-gray-500 text-sm">Full Name</p>
+                            <p class="font-medium" id="profileName">Hulaimi musaddiq</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Email</p>
+                            <p class="font-medium" id="profileEmail">user@example.com</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-500 text-sm">Account Status</p>
+                            <p class="font-medium text-green-600">Active</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <!-- Summary Cards -->
+                    <div class="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-blue-600 font-medium">Active VPS</p>
+                                <p class="text-2xl font-bold text-blue-800">5</p>
+                            </div>
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <i class="fas fa-server text-blue-600"></i>
+                            </div>
+                        </div>
+                        <a href="#" class="text-sm text-blue-600 mt-2 inline-block hover:text-blue-800">View all VPS →</a>
+                    </div>
+                    
+                    <div class="bg-green-50 rounded-lg p-4 border border-green-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-green-600 font-medium">Storage Used</p>
+                                <p class="text-2xl font-bold text-green-800">24.5 GB</p>
+                            </div>
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <i class="fas fa-cloud text-green-600"></i>
+                            </div>
+                        </div>
+                        <a href="#" class="text-sm text-green-600 mt-2 inline-block hover:text-green-800">Manage Storage →</a>
+                    </div>
+                    
+                    <div class="bg-purple-50 rounded-lg p-4 border border-purple-100">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-purple-600 font-medium">ERP Users</p>
+                                <p class="text-2xl font-bold text-purple-800">4</p>
+                            </div>
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <i class="fas fa-users text-purple-600"></i>
+                            </div>
+                        </div>
+                        <a href="#" class="text-sm text-purple-600 mt-2 inline-block hover:text-purple-800">ERP Dashboard →</a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow p-6 mb-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h4 class="font-bold text-gray-800">Your Services</h4>
+                        <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">View All</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Service</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Specifications</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Expiry</th>
+                                </tr>
+                            </thead>
+                            <tbody id="servicesTable" class="bg-white divide-y divide-gray-200">
+                                <!-- Will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Billing Section -->
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                        <h4 class="font-bold text-gray-800 mb-4">Billing Summary</h4>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700">Next Payment Date</span>
+                                <span class="font-medium">May 15, 2023</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-gray-700">Total Due</span>
+                                <span class="font-bold text-blue-600">$87.50</span>
+                            </div>
+                            <button class="w-full bg-blue-600 text-white py-2 rounded-lg font-medium hover:bg-blue-700 transition mt-4">Pay Now</button>
+                        </div>
+                        
+                        <hr class="my-4 border-gray-200">
+                        
+                        <div>
+                            <h5 class="font-medium text-gray-700 mb-3">Service Breakdown</h5>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Proxmox VPS (2GB RAM)</span>
+                                    <span class="font-medium">$10.00</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Nextcloud (50GB)</span>
+                                    <span class="font-medium">$12.50</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">ERPNext (5 users)</span>
+                                    <span class="font-medium">$75.00</span>
+                                </div>
+                                <div class="flex justify-between pt-2 border-t border-gray-200">
+                                    <span class="text-gray-800 font-medium">Subtotal</span>
+                                    <span class="font-medium">$97.50</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Bundle Discount (10%)</span>
+                                    <span class="text-green-600">-$9.75</span>
+                                </div>
+                                <div class="flex justify-between font-bold text-gray-800">
+                                    <span>Total</span>
+                                    <span>$87.75</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Quick Access -->
+                    <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                        <h4 class="font-bold text-gray-800 mb-4">Service Quick Access</h4>
+                        
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="#" class="bg-blue-100 hover:bg-blue-200 rounded-lg p-3 text-center transition">
+                                <i class="fas fa-server text-blue-600 text-xl mb-2"></i>
+                                <p class="text-sm font-medium text-gray-800">VPS Console</p>
+                            </a>
+                            <a href="#" class="bg-green-100 hover:bg-green-200 rounded-lg p-3 text-center transition">
+                                <i class="fas fa-cloud text-green-600 text-xl mb-2"></i>
+                                <p class="text-sm font-medium text-gray-800">Nextcloud</p>
+                            </a>
+                            <a href="#" class="bg-purple-100 hover:bg-purple-200 rounded-lg p-3 text-center transition">
+                                <i class="fas fa-chart-pie text-purple-600 text-xl mb-2"></i>
+                                <p class="text-sm font-medium text-gray-800">ERP Dashboard</p>
+                            </a>
+                            <a href="#" class="bg-yellow-100 hover:bg-yellow-200 rounded-lg p-3 text-center transition">
+                                <i class="fas fa-cog text-yellow-600 text-xl mb-2"></i>
+                                <p class="text-sm font-medium text-gray-800">Settings</p>
+                            </a>
+                            <a href="#" class="bg-red-100 hover:bg-red-200 rounded-lg p-3 text-center transition">
+                                <i class="fas fa-file-invoice text-red-600 text-xl mb-2"></i>
+                                <p class="text-sm font-medium text-gray-800">Invoices</p>
+                            </a>
+                            <a href="#" class="bg-indigo-100 hover:bg-indigo-200 rounded-lg p-3 text-center transition">
+                                <i class="fas fa-headset text-indigo-600 text-xl mb-2"></i>
+                                <p class="text-sm font-medium text-gray-800">Support</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-bold text-xl mb-4">CloudHost</h4>
+                    <p class="text-gray-400">Complete cloud solutions for businesses of all sizes.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">Services</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Proxmox VPS</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Nextcloud Storage</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">ERPNext System</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Managed Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">Company</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4">Legal</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Acceptable Use</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">SLA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 CloudHost Solutions. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Login/Register Modal Logic
+        const loginBtn = document.getElementById('loginBtn');
+        const loginModal = document.getElementById('loginModal');
+        const closeLoginModal = document.getElementById('closeLoginModal');
+        const showRegisterForm = document.getElementById('showRegisterForm');
+        const showLoginForm = document.getElementById('showLoginForm');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const dashboardModal = document.getElementById('dashboardModal');
+        const closeDashboardModal = document.getElementById('closeDashboardModal');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const userName = document.getElementById('userName');
+        
+        // Sample users with service data
+        const users = [
+            { 
+                email: 'user@example.com', 
+                password: 'password123', 
+                name: 'Demo User',
+                company: 'ACME Corp',
+                plan: 'Business Premium',
+                services: [
+                    {
+                        name: 'Proxmox VPS',
+                        specs: '4GB RAM, 100GB SSD',
+                        status: 'Active',
+                        expiry: '2023-12-31'
+                    },
+                    {
+                        name: 'Nextcloud Storage',  
+                        specs: '250GB',
+                        status: 'Active',
+                        expiry: '2023-12-31'
+                    },
+                    {
+                        name: 'ERPNext',
+                        specs: '10 Users',
+                        status: 'Active',
+                        expiry: '2023-12-31'
+                    }
+                ],
+                usage: {
+                    cpu: '35%',
+                    memory: '50%',
+                    storage: '24.5/250GB'
+                }
+            }
+        ];
+        
+        // Check if user is logged in from localStorage
+        function checkLogin() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser) {
+                const user = JSON.parse(loggedInUser);
+                userName.textContent = user.name;
+                if (user.company) {
+                    document.getElementById('userCompany').textContent = user.company;
+                }
+                if (user.plan) {
+                    document.getElementById('userPlan').textContent = user.plan;
+                }
+                document.getElementById('profileName').textContent = user.name;
+                document.getElementById('profileEmail').textContent = user.email;
+                
+                // Populate services table
+                const servicesTable = document.getElementById('servicesTable');
+                if (user.services && servicesTable) {
+                    servicesTable.innerHTML = '';
+                    user.services.forEach(service => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">${service.name}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">${service.specs}</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">${service.status}</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">${service.expiry}</td>
+                        `;
+                        servicesTable.appendChild(row);
+                    });
+                }
+                
+                dashboardModal.classList.remove('hidden');
+            }
+        }
+        
+        // Initialize charts when dashboard loads
+        function initCharts() {
+            // VPS Resources Chart
+            const vpsCtx = document.getElementById('vpsChart').getContext('2d');
+            new Chart(vpsCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['CPU Used', 'RAM Used', 'Storage Used', 'Available'],
+                    datasets: [{
+                        data: [35, 50, 25, 40],
+                        backgroundColor: [
+                            '#3B82F6',
+                            '#1D4ED8',
+                            '#2563EB',
+                            '#93C5FD'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    cutout: '70%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+            
+            // Nextcloud Storage Chart
+            const storageCtx = document.getElementById('storageChart').getContext('2d');
+            new Chart(storageCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Documents', 'Images', 'Videos', 'Other'],
+                    datasets: [{
+                        data: [15, 22, 8, 5],
+                        backgroundColor: [
+                            '#10B981',
+                            '#059669',
+                            '#34D399',
+                            '#A7F3D0'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+            
+            // ERPNext Data Chart
+            const erpCtx = document.getElementById('erpChart').getContext('2d');
+            new Chart(erpCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                    datasets: [{
+                        label: 'Invoices',
+                        data: [1200, 1900, 1500, 2000, 2200],
+                        borderColor: '#8B5CF6',
+                        backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Login event
+        document.getElementById('loginSubmit').addEventListener('click', function() {
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            const user = users.find(u => u.email === email && u.password === password);
+            
+            if (user) {
+                // Store in localStorage
+                localStorage.setItem('loggedInUser', JSON.stringify(user));
+                
+                // Show dashboard
+                loginModal.classList.add('hidden');
+                userName.textContent = user.name;
+                dashboardModal.classList.remove('hidden');
+                initCharts();
+            } else {
+                alert('Invalid email or password');
+            }
+        });
+        
+        // Register event (demo only)
+        document.getElementById('registerSubmit').addEventListener('click', function() {
+            const name = document.getElementById('registerName').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('registerConfirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+            
+            // Add new user (for demo only, not secure for production)
+            const newUser = { email, password, name };
+            users.push(newUser);
+            
+            // Switch to login form and auto-fill
+            registerForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+            document.getElementById('loginEmail').value = email;
+            document.getElementById('loginPassword').value = password;
+            
+            alert('Registration successful! Please login.');
+        });
+        
+        // Logout event
+        logoutBtn.addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            dashboardModal.classList.add('hidden');
+        });
+        
+        // Open login modal
+        loginBtn.addEventListener('click', function() {
+            loginModal.classList.remove('hidden');
+        });
+        
+        // Close login modal
+        closeLoginModal.addEventListener('click', function() {
+            loginModal.classList.add('hidden');
+        });
+        
+        // Close dashboard modal
+        closeDashboardModal.addEventListener('click', function() {
+            dashboardModal.classList.add('hidden');
+        });
+        
+        // Toggle between login and register forms
+        showRegisterForm.addEventListener('click', function(e) {
+            e.preventDefault();
+            loginForm.classList.add('hidden');
+            registerForm.classList.remove('hidden');
+        });
+        
+        showLoginForm.addEventListener('click', function(e) {
+            e.preventDefault();
+            registerForm.classList.add('hidden');
+            loginForm.classList.remove('hidden');
+        });
+        
+        // Close modals when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === loginModal) {
+                loginModal.classList.add('hidden');
+            }
+            if (e.target === dashboardModal) {
+                dashboardModal.classList.add('hidden');
+            }
+        });
+        
+        // Check for logged in user on page load
+        document.addEventListener('DOMContentLoaded', checkLogin);
+    </script>
+</body>
+</html>
